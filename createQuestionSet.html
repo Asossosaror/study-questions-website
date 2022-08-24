@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Create Study Sets</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        
+        <header>
+            <h1>This is the Create-page</h1>
+            <p>This is the page where you can create your study sets.</p>
+        </header>
+        <main>
+            <form>
+                <label for="headlineFieldInput">Headline: </label><br>
+                <input required type="text" id="headlineFieldInput" size="30" placeholder="Type headline here"><br><br>
+                <label for="questionFieldInput">Question: </label><br>
+                <input required type="text" id="questionFieldInput" size="30" placeholder="Type question here"><br><br>
+                <label for="correctAnswerFieldInput">Answer: </label><br>
+                <textarea required name="correctAnswerFieldInput" id="correctAnswerFieldInput" cols="50" rows="10" placeholder="Write the correct answer here"></textarea><br><br>
+                <button onclick="addQuestion()" type="submit" class="button1" >Add Question</button><br><br>
+                <button class="button1" type="button" onclick="addSet()">Finish study set</button>
+                <button onclick="resetStorage()" class="button1">Reset memory</button>
+            </form>
+        </main>        
+
+    </body>
+</html>
