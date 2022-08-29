@@ -12,10 +12,17 @@
             <h1>This is the Create-page</h1>
             <p>This is the page where you can create your study sets.</p>
         </header>
-        <h1 id="hello">Hello!? This is winows tech support. How...</h1>
         <main>
+            <div>
+                <div class="dropdown">
+                    <button class="link dropdown-head" onclick="showDropdown()">Subject</button>
+                    <div class="dropdown-menu" id="dropdown1">
+                        Content, why?
+                    </div>
+                </div>
+            </div>
             <form>
-                <label for="headlineFieldInput">Headline: </label><br>
+                <label for="headlineFieldInput" id="headlineHeadline">Headline: </label><br>
                 <input required type="text" id="headlineFieldInput" size="30" placeholder="Type headline here"><br><br>
                 <label for="questionFieldInput">Question: </label><br>
                 <input required type="text" id="questionFieldInput" size="30" placeholder="Type question here"><br><br>
@@ -26,6 +33,6 @@
                 <button onclick="resetStorage()" class="button1">Reset memory</button>
             </form>
         </main>        
-
+        <button onclick="testFunc()">Test</button>
     </body>
 </html>

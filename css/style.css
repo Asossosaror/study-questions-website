@@ -34,7 +34,7 @@ body{
 }
 
 footer{
-    background-color: navy;
+    background-color: darkblue;
     color: white;
     min-height: 100px;
     padding-top: 10px;
@@ -44,22 +44,90 @@ footer{
     margin-top: auto;
 }
 
+body main form {
+    margin-top: 25px;
+}
+
+body main form input {
+    background-color: deepskyblue;
+    border-width: 2px;
+    border-color: rgb(0, 153, 255);
+}
+
+body main form textarea {
+    place-content: black;
+    background-color: deepskyblue;
+    border-width: 2px;
+    border-color: rgb(0, 153, 255);
+}
+
+body main form input::placeholder{
+    color: rgba(0, 0, 255, 0.658);
+}
+
+body main form textarea::placeholder{
+    color: rgba(0, 0, 255, 0.658);
+}
+
+body main form input:focus {
+    background-color: lightskyblue;
+    border-width: 2px;
+    border-color: blue;
+    outline: none;
+}
+
+body main form textarea:focus {
+    background-color: lightskyblue;
+    border-width: 2px;
+    border-color: blue;
+    outline: none;
+}
+
 .button1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 15px;
-    font-size: large;
-    padding: 20px;
+    font-size: 20px;
+    padding: 20px 30px;
     border: none;
-    border-radius: 35px;
+    border-radius: 15px;
     color: white;
-    background-color: blue;
+    background-color: darkblue;
 }
 
 .button1:hover{
-    margin: 15px;
-    font-size: large;
-    padding: 20px;
-    border: none;
-    border-radius: 35px;
+    background-color: rgb(17, 17, 218);
+}
+
+.dropdown-head {
+    background-color: darkblue;
     color: white;
-    background-color: rgb(50, 50, 255);
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    padding: 10px 50px ;
+    border-radius: 5px;
+}
+
+.dropdown > .link:focus, .link:hover {}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-menu{
+    position: absolute;
+    top: calc(100% + .20rem);
+    background-color: darkblue;
+    color: lightblue;
+    padding: .25rem;
+    border-radius: .25rem;
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, .1);
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+    pointer-events: none;
+}
+
+.dropdown-menu.active {
+    opacity: 1;
+    pointer-events: auto;
 }

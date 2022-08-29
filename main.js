@@ -21,6 +21,8 @@ function addQuestion() {
     let question = document.getElementById('questionFieldInput');
     let correctAnswer = document.getElementById('correctAnswerFieldInput');
     if (headline != '' && question.value != '' && correctAnswer.value != ''){
+        document.getElementById("headlineHeadline").style.display = 'none';
+        document.getElementById("headlineFieldInput").style.display = 'none';
         questionsArray.push(question.value);
         answersArray.push(correctAnswer.value);
         // Storing arrays
@@ -30,10 +32,6 @@ function addQuestion() {
         localStorage.setItem("answersArray", answersArray_serialized);
         console.log(questionsArray);
         console.log(answersArray);
-
-    if (questionsArray.length >= 1)
-        console.log(questionsArray.length);
-        document.getElementById("hello").style.display = 'block';
     }
 }
 
@@ -66,6 +64,9 @@ function addSet(){
         localStorage.setItem("answersArray", answersArray_serialized);
         // Reset headline
         localStorage.setItem("headline", '');
+        // Make headline field reappear.
+        document.getElementById("headlineHeadline").style.display = 'block';
+        document.getElementById("headlineFieldInput").style.display = 'block';
     }
 }
 
@@ -86,4 +87,17 @@ function resetStorage() {
     console.log(answersArray);
 
     localStorage.setItem("headline", '');
+    // Make headline field reappear
+    document.getElementById("headlineHeadline").style.display = 'block';
+    document.getElementById("headlineFieldInput").style.display = 'block';
 }
+
+function showDropdown(){
+    document.getElementById("dropdown1").classList.toggle('active');
+}
+
+window.addEventListener('click', (thing) => {
+    if (thing.target.classList.contains('link') != true) {
+        document.getElementById("dropdown1").classList.remove('active');
+    }
+})
