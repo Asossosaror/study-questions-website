@@ -97,7 +97,7 @@ function showDropdown(){
 }
 
 window.addEventListener('click', (thing) => {
-    if (thing.target.classList.contains('link') != true) {
+    if (thing.target.classList.contains('link') == false && thing.target.classList.contains('dropdown-menu') == false) {
         document.getElementById("dropdown1").classList.remove('active');
     }
 })
