@@ -40,6 +40,7 @@ function addSet(){
     questionsArray = JSON.parse(localStorage.getItem("questionsArray")) || [];
     answersArray = JSON.parse(localStorage.getItem("answersArray")) || [];
     headline = localStorage.getItem("headline");
+    subject = localStorage.getItem("subject");
     if (questionsArray != [] && answersArray != []){
         addObj = {'questions': questionsArray, 'correctAnswers': answersArray};
         console.log(addObj);
@@ -51,7 +52,7 @@ function addSet(){
             }
         }
         let mainIdNumber = String(countMainObj);
-        mainObj['setId' + mainIdNumber] = {'headline': headline, 'qaPairs': addObj};
+        mainObj['setId' + mainIdNumber] = {'subject': subject, 'headline': headline, 'qaPairs': addObj};
         //Saving mainObj in local storage
         let mainObj_serialized = JSON.stringify(mainObj);
         localStorage.setItem("mainObj", mainObj_serialized);
@@ -96,8 +97,17 @@ function showDropdown(){
     document.getElementById("dropdown1").classList.toggle('active');
 }
 
+let subject;
+
+function chooseSubject(a) {
+    subject = a;
+    // Save subject
+    localStorage.setItem('subject', subject);
+    console.log(subject);
+}
+
 window.addEventListener('click', (thing) => {
-    if (thing.target.classList.contains('link') == false && thing.target.classList.contains('dropdown-menu') == false) {
+    if (thing.target.classList.contains('link') == false && thing.target.classList.contains('dropdown-head') == false) {
         document.getElementById("dropdown1").classList.remove('active');
     }
 })

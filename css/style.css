@@ -151,6 +151,10 @@ body main form textarea:focus {
     text-underline-position: none;
 }
 
+.subjectLink:hover {
+    color: black;
+}
+
 .subjectLink:link{
     text-decoration: none;
 }
