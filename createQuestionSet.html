@@ -14,21 +14,21 @@
         </header>
         <main>
             <div class="dropdown">
-                <button class="link dropdown-head" onclick="showDropdown()">Subject</button>
+                <input type="button" class="link dropdown-head" onclick="showDropdown()" id="dropdownButton" value="Subject">
                 <div class="dropdown-menu info-grid" id="dropdown1">
                     <div>
                         <div>What subject is the set about?</div>
                         <div class="subject">
-                            <a href="#" class="subjectLink" onclick="chooseSubject('Historia')">Historia</a>
-                            <a href="#" class="subjectLink">Geografi</a>
-                            <a href="#" class="subjectLink">Samhällskunskap</a>
-                            <a href="#" class="subjectLink">Religion</a>
-                            <a href="#" class="subjectLink">Fysik</a>
-                            <a href="#" class="subjectLink">Kemi</a>
-                            <a href="#" class="subjectLink">Biologi</a>
-                            <a href="#" class="subjectLink">Svenska</a>
-                            <a href="#" class="subjectLink">Engelska</a>
-                            <a href="#" class="subjectLink">Matematik</a>
+                            <a href="javascript:chooseSubject('Historia')" class="subjectLink" id="historia">Historia</a>
+                            <a href="javascript:chooseSubject('Geografi')" class="subjectLink">Geografi</a>
+                            <a href="javascript:chooseSubject('Samhällskunskap')" class="subjectLink">Samhällskunskap</a>
+                            <a href="javascript:chooseSubject('Religion')" class="subjectLink">Religion</a>
+                            <a href="javascript:chooseSubject('Fysik')" class="subjectLink">Fysik</a>
+                            <a href="javascript:chooseSubject('Kemi')" class="subjectLink">Kemi</a>
+                            <a href="javascript:chooseSubject('Biologi')" class="subjectLink">Biologi</a>
+                            <a href="javascript:chooseSubject('Svenska')" class="subjectLink">Svenska</a>
+                            <a href="javascript:chooseSubject('Engelska')" class="subjectLink">Engelska</a>
+                            <a href="javascript:chooseSubject('Matematik')" class="subjectLink">Matematik</a>
                         </div>
                     </div>
                 </div>
@@ -45,6 +45,5 @@
                 <button onclick="resetStorage()" class="button1">Reset memory</button>
             </form>
         </main>        
-        <button onclick="testFunc()">Test</button>
     </body>
 </html>

@@ -100,10 +100,12 @@ function showDropdown(){
 let subject;
 
 function chooseSubject(a) {
+    document.getElementById("dropdownButton").value = a;
     subject = a;
-    // Save subject
-    localStorage.setItem('subject', subject);
     console.log(subject);
+    // Save subject variable.
+    localStorage.setItem("subject", subject);
+    console.log(localStorage.getItem("subject"));
 }
 
 window.addEventListener('click', (thing) => {

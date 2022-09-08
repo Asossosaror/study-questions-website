@@ -108,8 +108,6 @@ body main form textarea:focus {
     border-radius: 5px;
 }
 
-.dropdown > .link:focus, .link:hover {}
-
 .dropdown{
     position: relative;
 }
@@ -152,7 +150,7 @@ body main form textarea:focus {
 }
 
 .subjectLink:hover {
-    color: black;
+    font-size: large;
 }
 
 .subjectLink:link{
