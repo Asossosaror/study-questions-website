@@ -93,8 +93,13 @@ function resetStorage() {
     document.getElementById("headlineFieldInput").style.display = 'block';
 }
 
-function showDropdown(){
-    document.getElementById("dropdown1").classList.toggle('active');
+function showDropdown(dropdownNumber){
+    if (dropdownNumber == 1) {
+        document.getElementById("dropdown1").classList.toggle('active');
+    }
+    if (dropdownNumber == 2) {
+        document.getElementById("dropdown2").classList.toggle('active');
+    }
 }
 
 let subject;
@@ -108,8 +113,11 @@ function chooseSubject(a) {
     console.log(localStorage.getItem("subject"));
 }
 
+function whatSubject()
+
 window.addEventListener('click', (thing) => {
     if (thing.target.classList.contains('link') == false && thing.target.classList.contains('dropdown-head') == false) {
         document.getElementById("dropdown1").classList.remove('active');
+        document.getElementById("dropdown2").classList.remove('active');
     }
 })
